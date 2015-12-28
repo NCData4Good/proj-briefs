@@ -1,0 +1,59 @@
+---
+output: 
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    fig_width: 5.5
+    fig_height: 2.25
+    fig_retina: 1
+    includes:
+      before_body: _includes/before_body.html
+      after_body: _includes/after_body.html
+---
+
+## Template
+
+This is an R Markdown document template that includes options for the appearance and style.  This template uses the styles from the Innovate United <http://innovateunited.org>.  The left navigation box will be updated with link to project briefs.  Start by updating the "Template" title above.  Include a brief explanation about the problem/question you are addressing.
+
+</br>
+
+#### Problem/Question
+
+In this section, elaborate about the problem and introduce the data analysis/visualization that will be presented.  Modify the "Problem/Question" line above.
+
+</br>
+
+#### Visualization
+
+Include a chart, map, or other way to illustrate the problem.  Note that code & warnings are suppressed.
+The map below uses Leaflet.  Check out tutorials at:
+<http://blog.rstudio.org/2015/06/24/leaflet-interactive-web-maps-with-r/> and <https://rstudio.github.io/leaflet/>
+
+```{r, echo=FALSE, warning=FALSE}
+library(leaflet)
+mm <- leaflet() %>% addTiles() %>% addMarkers(lat=35.86328,lng=-78.83349, popup="We are here")
+mm
+```
+
+Include insights from the data analysis.
+
+</br>
+
+#### Sources
+Include a list of sources used for the analysis.
+Make sure to include original source like "US Census Bureau 2014 American Community Survey (ACS) - Poverty Status in the Past 12 Months (Table S1701) <http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S1701>"
+
+</br>
+
+#### Contributors
+Include name and contact information (Twitter/Github)
+
+</br>
+
+#### Technical Resources
+In this section include links to other related resources of interest.
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.  Some headlines may not appear until you 'Open in Browser'.
+
+For help on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+
